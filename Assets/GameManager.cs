@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     private GameObject playerbody;
     private GameObject cageAnim;
     private GameObject cage;
-    private OVRPlayerController OPC;
+    //private OVRPlayerController OPC;
     private PointManager PM;
     private Health HH;
     private TimerDown TD;
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
             cageAnim = GameObject.Find("Player/CageAnimation");
             door = GameObject.Find("Cage/Door");
             dooranim = door.GetComponent<Animator>();
-            OPC = player.GetComponent<OVRPlayerController>(); //Gathering all of the needed variables.
+           //OPC = player.GetComponent<OVRPlayerController>(); //Gathering all of the needed variables.
             PM = GetComponent<PointManager>();
             HH = playerbody.GetComponent<Health>();
             TD = GetComponent<TimerDown>();
@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
         {
             canLoad = false;
             cage.SetActive(true); //Showing the cage
-            OPC.enabled = !OPC.enabled; //Disables player movement
+            //OPC.enabled = !OPC.enabled; //Disables player movement
             anim.SetBool("Start", true); //Dropping the cage
 
 

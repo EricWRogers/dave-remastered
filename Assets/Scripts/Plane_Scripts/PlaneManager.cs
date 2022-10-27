@@ -32,7 +32,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
     [HideInInspector]
     public Rigidbody rb;
     private Animator anim;
-    private OVRGrabbable grabbable;
+   // private OVRGrabbable grabbable;
     private Collider[] planeColliders;
     private LookAtPlayer look;
     [HideInInspector]
@@ -57,7 +57,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        grabbable = GetComponentInParent<OVRGrabbable>();
+        //grabbable = GetComponentInParent<OVRGrabbable>();
         planeColliders = GetComponents<Collider>();
         gManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         look = GetComponent<LookAtPlayer>();
@@ -66,7 +66,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
 
         moveNoise.Play();
 
-        grabbable.enabled = false;
+        //grabbable.enabled = false;
     }
 
     private void LateUpdate()
@@ -180,7 +180,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;
                 anim.enabled = false;
-                grabbable.enabled = true;
+                //grabbable.enabled = true;
                 gManager.GetComponent<PointManager>().score += points;
 
                 transform.parent.GetComponent<AudioSource>().Stop();
@@ -233,7 +233,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;
                 anim.enabled = false;
-                grabbable.enabled = true;
+                //grabbable.enabled = true;
                 gManager.GetComponent<PointManager>().score += points;
 
                 transform.parent.GetComponent<AudioSource>().Stop();

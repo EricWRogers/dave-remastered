@@ -17,7 +17,7 @@ public class SlowEffect : MonoBehaviour
     private Vector3 direction;
 
     private float ccAccelerationDefault;
-    public OVRPlayerController controller;
+    //public OVRPlayerController controller;
     private bool slowed = false;
     private float timer = 0f;
 
@@ -25,7 +25,7 @@ public class SlowEffect : MonoBehaviour
 
     void Start()
     {
-        ccAccelerationDefault = controller.Acceleration;
+        //ccAccelerationDefault = controller.Acceleration;
     }
 
     void Update()
@@ -47,14 +47,14 @@ public class SlowEffect : MonoBehaviour
         if(currentHitObject.tag == "Debris" && !slowed)
         {
             slowed = true;
-            controller.Acceleration = ccAccelerationDuringSlow;
+            //controller.Acceleration = ccAccelerationDuringSlow;
             Debug.Log("Slowed");
         }
         else if(slowed && timer >= slowDuration)
         {
             timer = 0f;
             slowed = false;
-            controller.Acceleration = ccAccelerationDefault;
+            //controller.Acceleration = ccAccelerationDefault;
             Debug.Log("Un-Slowed");
         }
         else if(currentHitObject == null)

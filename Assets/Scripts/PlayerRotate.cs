@@ -8,8 +8,8 @@ public class PlayerRotate : MonoBehaviour
 
     void Update()
     {
-        Vector2 stickPos = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
-        float horizontalInput = stickPos.x;
-        transform.Rotate(Vector3.up * horizontalInput * turnSpeed * Time.deltaTime);
+        //Vector2 stickPos = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
+        //float horizontalInput = stickPos.x;
+        //transform.Rotate(Vector3.up * horizontalInput * turnSpeed * Time.deltaTime);
     }
 }

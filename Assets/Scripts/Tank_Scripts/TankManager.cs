@@ -29,7 +29,7 @@ public class TankManager : MonoBehaviour
     private bool startedDestroy = false;
     private bool fired = false;
     private Rigidbody rb;
-    private OVRGrabbable grabbable;
+    //private OVRGrabbable grabbable;
     private GameObject player;
     private GameManager gManager;
     private bool isDead = false;
@@ -45,10 +45,10 @@ public class TankManager : MonoBehaviour
         anim = GetComponent<Animator>();
         agent = GetComponentInParent<UnityEngine.AI.NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
-        grabbable = GetComponentInParent<OVRGrabbable>();
+        //grabbable = GetComponentInParent<OVRGrabbable>();
         gManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
-        grabbable.enabled = false;
+        //grabbable.enabled = false;
     }
 
     void Update()
@@ -96,7 +96,7 @@ public class TankManager : MonoBehaviour
                 rb.useGravity = true;
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;
-                grabbable.enabled = true;
+                //grabbable.enabled = true;
                 gManager.GetComponent<PointManager>().score += points;
                 Destroy(agent);
                 CancelInvoke();
@@ -146,7 +146,7 @@ public class TankManager : MonoBehaviour
                 rb.useGravity = true;
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;
-                grabbable.enabled = true;
+                //grabbable.enabled = true;
                 gManager.GetComponent<PointManager>().score += points;
                 Destroy(agent);
                 CancelInvoke();

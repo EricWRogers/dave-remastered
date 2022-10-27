@@ -24,7 +24,7 @@ public class BoatManager : MonoBehaviour
 
     private float Distance;
     private GameObject player;
-    private OVRGrabbable grabbable;
+   // private OVRGrabbable grabbable;
     private Rigidbody rb;
     private Animator anim;
     private GameManager gManager;
@@ -38,13 +38,13 @@ public class BoatManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("PlayerGround");
-        grabbable = GetComponentInParent<OVRGrabbable>();
+        //grabbable = GetComponentInParent<OVRGrabbable>();
         rb = GetComponent<Rigidbody>();
-        grabbable.enabled = false;
+        //grabbable.enabled = false;
         gManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         anim = GetComponent<Animator>();
 
-        grabbable.enabled = false;
+        //grabbable.enabled = false;
     }
 
     void Update()
@@ -124,7 +124,7 @@ public class BoatManager : MonoBehaviour
                 }
 
                 modelCollider.enabled = true;
-                grabbable.enabled = true;
+                //grabbable.enabled = true;
                 rb.useGravity = true;
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;
@@ -174,7 +174,7 @@ public class BoatManager : MonoBehaviour
                 }
 
                 modelCollider.enabled = true;
-                grabbable.enabled = true;
+                //grabbable.enabled = true;
                 rb.useGravity = true;
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;

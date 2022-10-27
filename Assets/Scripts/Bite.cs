@@ -10,16 +10,16 @@ public class Bite : MonoBehaviour
     public Health HH;
     public GameObject Rhands;
     public GameObject Lhands;
-    public OVRGrabber ROVRG;
-    public OVRGrabber LOVRG;
+    //public OVRGrabber ROVRG;
+    //public OVRGrabber LOVRG;
     void Start() //Runs when game starts
     {
         playerBody = GameObject.Find("Player/PlayerBody");
         Rhands = GameObject.Find("Player/OVRCameraRig/TrackingSpace/RightHandAnchor/CustomHandRight");
         Lhands = GameObject.Find("Player/OVRCameraRig/TrackingSpace/LeftHandAnchor/CustomHandLeft");
         audioData = FindObjectOfType<audioManager>(); //Gets component on the game object w the script
-        ROVRG = Rhands.GetComponent<OVRGrabber>();
-        LOVRG = Lhands.GetComponent<OVRGrabber>();
+        //ROVRG = Rhands.GetComponent<OVRGrabber>();
+        //LOVRG = Lhands.GetComponent<OVRGrabber>();
         HH = playerBody.GetComponent<Health>();
 
     }
