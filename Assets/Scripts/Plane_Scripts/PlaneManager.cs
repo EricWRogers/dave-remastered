@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlaneManager : MonoBehaviour   //general home for all overarching functions of the plane and all public variables
 {
@@ -32,9 +32,9 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
     [HideInInspector]
     public Rigidbody rb;
     private Animator anim;
-   // private OVRGrabbable grabbable;
+    public XRGrabInteractable grabbable;
     private Collider[] planeColliders;
-    private LookAtPlayer look;
+    public LookAtPlayer look;
     [HideInInspector]
     public float Distance;
     [HideInInspector]
@@ -45,9 +45,8 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
     private bool isDead;
     [HideInInspector]
     public float runningTime = 0;
-    [HideInInspector]
     public AudioSource atkSound;
-    private AudioSource moveNoise;
+    public AudioSource moveNoise;
     [HideInInspector]
     public bool startedSound = false;
     private bool triggered = false;
@@ -57,16 +56,13 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        //grabbable = GetComponentInParent<OVRGrabbable>();
         planeColliders = GetComponents<Collider>();
         gManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        look = GetComponent<LookAtPlayer>();
-        atkSound = GetComponent<AudioSource>();
         moveNoise = transform.parent.GetComponent<AudioSource>();
 
         moveNoise.Play();
 
-        //grabbable.enabled = false;
+        grabbable.enabled = false;
     }
 
     private void LateUpdate()
@@ -180,7 +176,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;
                 anim.enabled = false;
-                //grabbable.enabled = true;
+                grabbable.enabled = true;
                 gManager.GetComponent<PointManager>().score += points;
 
                 transform.parent.GetComponent<AudioSource>().Stop();
@@ -233,7 +229,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;
                 anim.enabled = false;
-                //grabbable.enabled = true;
+                grabbable.enabled = true;
                 gManager.GetComponent<PointManager>().score += points;
 
                 transform.parent.GetComponent<AudioSource>().Stop();
