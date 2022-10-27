@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 503632666621790144}
   - component: {fileID: 1670465121319671810}
   - component: {fileID: 7185853322404537769}
-  - component: {fileID: 4085859770790293828}
   - component: {fileID: 4962686328571912657}
   m_Layer: 0
   m_Name: Helipad
@@ -34,6 +33,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 512585259912594435}
   m_Father: {fileID: 0}
@@ -58,6 +58,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -145,22 +146,6 @@ MonoBehaviour:
   velocityThreshold: 10
   pointValue: 1
   DestroyedPrefab: {fileID: 5609846385357135496, guid: d9f8ed75140d97e469df3b1dca58f761, type: 3}
---- !u!114 &4085859770790293828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3197379124221659058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!114 &4962686328571912657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +195,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2816033944708521224}
   m_RootOrder: 0

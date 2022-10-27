@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Holdable
   - Whiteboard
+  - FireBreath
+  - Enemy
+  - Debris
+  - Building
+  - PlayerGround
   layers:
   - Default
   - TransparentFX
@@ -13,9 +18,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Ground
+  - Enemy
   - 
   - 
   - 

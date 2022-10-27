@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class HelicopterManager : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class HelicopterManager : MonoBehaviour
     private int Direction = -1;
     [HideInInspector]public bool started = false;
     private GameObject player;
-   // private OVRGrabbable grabbable;
+    public XRGrabInteractable grabbable;
     private Rigidbody rb;
     private HelicopterAttackManager atkManager;
     private GameManager gManager;
@@ -49,12 +50,11 @@ public class HelicopterManager : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
-        //grabbable = GetComponentInParent<OVRGrabbable>();
         rb = GetComponent<Rigidbody>();
         atkManager = GetComponent<HelicopterAttackManager>();
-        //gManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        gManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
-        //grabbable.enabled = false;
+        grabbable.enabled = false;
     }
 
     void Update()
@@ -160,12 +160,12 @@ public class HelicopterManager : MonoBehaviour
                 }
 
                 isDead = true;
-                //grabbable.enabled = true;
+                grabbable.enabled = true;
                 rb.useGravity = true;
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;
                 anim.SetTrigger("Died");
-                //gManager.GetComponent<PointManager>().score += points;
+                gManager.GetComponent<PointManager>().score += points;
                 atkManager.CancelInvoke();
                 atkManager.enabled = false;
 
@@ -208,7 +208,7 @@ public class HelicopterManager : MonoBehaviour
                 }
 
                 isDead = true;
-                //grabbable.enabled = true;
+                grabbable.enabled = true;
                 rb.useGravity = true;
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;
