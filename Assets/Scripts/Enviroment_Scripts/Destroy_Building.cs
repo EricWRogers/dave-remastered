@@ -13,10 +13,10 @@ public class Destroy_Building : MonoBehaviour
 
     private void Start()
     {
-        //gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         //pm = gm.GetComponent<PointManager>(); //gets point manager sets it to pm
         SimplePool.Preload(DestroyedPrefab, 1); //preloads the destroyed version into the pool
-        //gm.buildingCount++;
+        gm.buildingCount++;
     }
 
     private void OnTriggerEnter(Collider other)
