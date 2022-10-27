@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/PenTestScene.unity
-    guid: 07c885f0bf75bdf44b13caba2c28d4b5
-  - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 70aef371034e90947ada0efb5547c2b1
+    path: Assets/Scenes/BuildScenes/MilitaryLevel.unity
+    guid: 1ce3e983785a7f24da8cffa02854257e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 118e8038fb81a804294a23ec8b6ad2bd, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 754fb147f665b7d408be2250e85fb05f, type: 2}

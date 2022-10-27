@@ -32,6 +32,7 @@ public class HelicopterManager : MonoBehaviour
     [Tooltip("The explosion effect that is played on death")] public GameObject explosion;
     [Tooltip("The radius at which the smoke particles will not be enabled")] public float deathSmokeTriggerRadius;
     public AudioClip deathSound;
+    public DespawnEnemy despawner;
 
     private Animator anim;
     private int Direction = -1;
@@ -53,7 +54,7 @@ public class HelicopterManager : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         atkManager = GetComponent<HelicopterAttackManager>();
         gManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-
+        despawner = GetComponent<DespawnEnemy>();
         grabbable.enabled = false;
     }
 
@@ -135,7 +136,7 @@ public class HelicopterManager : MonoBehaviour
     {
         if (!triggered)
         {
-            if (other.tag == "Player" || other.tag == "PlayerProjectile" || other.tag == "Debris")
+            if (other.tag == "Player" || other.tag == "PlayerProjectile" || other.tag == "Debris" || other.tag == "Building")
             {
                 Transform[] childTransforms = transform.parent.GetComponentsInChildren<Transform>();
                 childTransforms[0] = transform.parent;
@@ -160,11 +161,13 @@ public class HelicopterManager : MonoBehaviour
                 }
 
                 isDead = true;
+                despawner.StartShrink();
                 grabbable.enabled = true;
                 rb.useGravity = true;
                 rb.isKinematic = false;
                 rb.constraints = RigidbodyConstraints.None;
                 anim.SetTrigger("Died");
+                anim.enabled = false;
                 gManager.GetComponent<PointManager>().score += points;
                 atkManager.CancelInvoke();
                 atkManager.enabled = false;

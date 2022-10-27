@@ -1030,6 +1030,7 @@ GameObject:
   - component: {fileID: 5498504258214966629}
   - component: {fileID: 374999547930058996}
   - component: {fileID: 556952305984345846}
+  - component: {fileID: 5470255866857417383}
   m_Layer: 0
   m_Name: New_Helicopter
   m_TagString: Enemy
@@ -1126,7 +1127,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.19
+  m_Radius: 0.8
   m_Center: {x: 0.16, y: 0, z: 0}
 --- !u!95 &7791823336622472138
 Animator:
@@ -1397,6 +1398,22 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &5470255866857417383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7791823336622472137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fa1e5e83b9034590e33d36091eca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrinkDelay: 5
+  despawnTime: 10
+  shrinkRate: 0.3
+  scaleCutOff: 0.05
 --- !u!1 &8920670527692967702
 GameObject:
   m_ObjectHideFlags: 0

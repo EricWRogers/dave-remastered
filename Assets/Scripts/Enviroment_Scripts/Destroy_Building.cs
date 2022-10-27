@@ -22,7 +22,7 @@ public class Destroy_Building : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Trigger building hit");
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy")
         {
             if (!destroyed)
             {

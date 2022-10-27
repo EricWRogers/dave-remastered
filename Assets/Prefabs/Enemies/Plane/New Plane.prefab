@@ -251,7 +251,7 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: dfbecfe6de9d1b9449a945764fcf219d, type: 3}
   secondTime: 0
   rb: {fileID: 0}
-  grabbable: {fileID: 0}
+  grabbable: {fileID: 8105277298894082557}
   look: {fileID: 6554490105690312910}
   Distance: 0
   lastRotation: {x: 0, y: 0, z: 0, w: 0}

@@ -145,7 +145,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
     {
         if (!triggered)
         {
-            if (other.tag == "Player" || other.tag == "PlayerProjectile")
+            if (other.tag == "Player" || other.tag == "PlayerProjectile" || other.tag == "Debris")
             {
                 Transform[] childTransforms = transform.parent.GetComponentsInChildren<Transform>();
                 childTransforms[0] = transform.parent;
