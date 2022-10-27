@@ -10,7 +10,7 @@ public class Building_Healing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = GameObject.Find("Player/PlayerBody").GetComponent<Health>();
+       // health = GameObject.Find("Player/PlayerBody").GetComponent<Health>();
     }
 
     public void healPlayer()

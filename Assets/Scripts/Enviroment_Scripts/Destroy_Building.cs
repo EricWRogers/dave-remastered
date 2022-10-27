@@ -13,10 +13,10 @@ public class Destroy_Building : MonoBehaviour
 
     private void Start()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-        pm = gm.GetComponent<PointManager>(); //gets point manager sets it to pm
+        //gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        //pm = gm.GetComponent<PointManager>(); //gets point manager sets it to pm
         SimplePool.Preload(DestroyedPrefab, 1); //preloads the destroyed version into the pool
-        gm.buildingCount++;
+        //gm.buildingCount++;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -57,12 +57,12 @@ public class Destroy_Building : MonoBehaviour
     {
         if (!destroyed)
         {
-            //Debug.Log("Building destruction started");
-            pm.score += 1; //adds score
+            Debug.Log("Building destruction started");
+            //pm.score += 1; //adds score
             destroyed = true;
-            gm.buildingCount--;
+            //gm.buildingCount--;
             GameObject temp = SimplePool.Spawn(DestroyedPrefab, transform.position, transform.rotation);
-            temp.transform.localScale = gameObject.transform.localScale;
+            temp.transform.localScale = gameObject.transform.localScale * 1.2f;
             if(gameObject.TryGetComponent<Building_Healing>(out Building_Healing healing))
             {
                 healing.healPlayer();

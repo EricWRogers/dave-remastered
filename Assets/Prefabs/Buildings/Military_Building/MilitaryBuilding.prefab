@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5286e72a40c4a44b8672fbb63b256d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityThreshold: 10
+  velocityThreshold: 2
   pointValue: 1
   DestroyedPrefab: {fileID: 7604489282358314830, guid: 15d5f5b2b0f46ae44b42054bf9104c54, type: 3}
 --- !u!114 &7400405421704100722

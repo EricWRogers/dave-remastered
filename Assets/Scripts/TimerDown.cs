@@ -16,7 +16,7 @@ public class TimerDown : MonoBehaviour
     void Update()
     {
         timer = Mathf.RoundToInt(timerCount);
-        timerDownText.text = "Time left: " + timer;
+        //timerDownText.text = "Time left: " + timer;
 
         if (GameManager.startAI == true && (GameManager.state == GameManager.LevelState.DEFAULT || GameManager.state == GameManager.LevelState.MILITARY))
         {
