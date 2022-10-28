@@ -187,7 +187,7 @@ public class TankManager : MonoBehaviour
     {
         if (isDead)
         {
-            Collider[] hits = Physics.OverlapSphere(transform.position, deathSmokeTriggerRadius, 3328); //binary number: 00110100000000
+            Collider[] hits = Physics.OverlapSphere(transform.position, deathSmokeTriggerRadius, 512); //binary number: 00110100000000
             bool hitPlayer = false;
             if (hits.Length > 0)
             {

@@ -85,7 +85,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
 
         if (isDead)
         {
-            Collider[] hits = Physics.OverlapSphere(transform.position, deathSmokeTriggerRadius, 383);
+            Collider[] hits = Physics.OverlapSphere(transform.position, deathSmokeTriggerRadius, 512);
             bool hitPlayer = false;
             if (hits.Length > 0)
             {
@@ -145,7 +145,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
     {
         if (!triggered)
         {
-            if (other.tag == "Player" || other.tag == "PlayerProjectile" || other.tag == "Debris")
+            if (other.tag == "Player" || other.tag == "PlayerProjectile" || other.tag == "Debris" || other.tag == "Building")
             {
                 Transform[] childTransforms = transform.parent.GetComponentsInChildren<Transform>();
                 childTransforms[0] = transform.parent;

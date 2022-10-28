@@ -11,6 +11,7 @@ TagManager:
   - Debris
   - Building
   - PlayerGround
+  - GameManager
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Player
   - Ground
   - Enemy
-  - 
+  - Player
   - 
   - 
   - 
