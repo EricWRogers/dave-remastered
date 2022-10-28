@@ -1,3 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 
 public class GameManager : MonoBehaviour
@@ -286,12 +291,12 @@ public class GameManager : MonoBehaviour
 
     public void LoadMil()
     {
-        if (int x == 0)
+        if (x == 0)
         {
             dooranim.SetBool("Open", true);
         }
 
-        if (int x == 1)
+        if (x == 1)
         {
             SceneManager.LoadScene("Military");
             x++;

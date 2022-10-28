@@ -33,6 +33,7 @@ public class HelicopterManager : MonoBehaviour
     [Tooltip("The radius at which the smoke particles will not be enabled")] public float deathSmokeTriggerRadius;
     public AudioClip deathSound;
     public DespawnEnemy despawner;
+    public Collider deadCollider;
 
     private Animator anim;
     private int Direction = -1;
@@ -162,6 +163,7 @@ public class HelicopterManager : MonoBehaviour
 
                 isDead = true;
                 despawner.StartShrink();
+                deadCollider.enabled = true;
                 grabbable.enabled = true;
                 rb.useGravity = true;
                 rb.isKinematic = false;

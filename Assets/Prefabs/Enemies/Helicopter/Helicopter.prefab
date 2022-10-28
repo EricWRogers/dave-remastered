@@ -384,7 +384,7 @@ BoxCollider:
   m_GameObject: {fileID: 3774267745596885652}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.194288, y: 0.6319727, z: 0.54000014}
   m_Center: {x: 0.21226089, y: 0.022479936, z: 0}
@@ -1027,10 +1027,11 @@ GameObject:
   - component: {fileID: 7791823336622472139}
   - component: {fileID: 7791823336622472138}
   - component: {fileID: 623308618}
-  - component: {fileID: 5498504258214966629}
   - component: {fileID: 374999547930058996}
   - component: {fileID: 556952305984345846}
   - component: {fileID: 5470255866857417383}
+  - component: {fileID: 4614889599064790798}
+  - component: {fileID: 8394910848675851421}
   m_Layer: 0
   m_Name: New_Helicopter
   m_TagString: Enemy
@@ -1090,6 +1091,8 @@ MonoBehaviour:
   explosion: {fileID: 7864564417494502393, guid: f5a75a34c796cfc4b956a58bb8bed4ac, type: 3}
   deathSmokeTriggerRadius: 1.08
   deathSound: {fileID: 8300000, guid: dfbecfe6de9d1b9449a945764fcf219d, type: 3}
+  despawner: {fileID: 5470255866857417383}
+  deadCollider: {fileID: 4614889599064790798}
   started: 0
   grabbable: {fileID: 556952305984345846}
 --- !u!114 &7791823336622472140
@@ -1125,7 +1128,7 @@ SphereCollider:
   m_GameObject: {fileID: 7791823336622472137}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.8
   m_Center: {x: 0.16, y: 0, z: 0}
@@ -1254,19 +1257,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &5498504258214966629
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7791823336622472137}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.10259, y: 0.66921234, z: 0.6104834}
-  m_Center: {x: 0.25692225, y: 0.07565689, z: -0.020594731}
 --- !u!54 &374999547930058996
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1414,6 +1404,32 @@ MonoBehaviour:
   despawnTime: 10
   shrinkRate: 0.3
   scaleCutOff: 0.05
+--- !u!65 &4614889599064790798
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7791823336622472137}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 2.194288, y: 0.6319727, z: 0.54000014}
+  m_Center: {x: 0.21226089, y: 0.022479936, z: 0}
+--- !u!65 &8394910848675851421
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7791823336622472137}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.31, y: 0.76, z: 0.66}
+  m_Center: {x: 0.21226089, y: 0.022479936, z: 0}
 --- !u!1 &8920670527692967702
 GameObject:
   m_ObjectHideFlags: 0
