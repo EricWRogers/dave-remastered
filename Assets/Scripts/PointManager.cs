@@ -19,6 +19,6 @@ public class PointManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score;
     }
 }

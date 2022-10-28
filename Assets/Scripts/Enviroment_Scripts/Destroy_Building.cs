@@ -14,7 +14,7 @@ public class Destroy_Building : MonoBehaviour
     private void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-        //pm = gm.GetComponent<PointManager>(); //gets point manager sets it to pm
+        pm = gm.GetComponent<PointManager>(); //gets point manager sets it to pm
         SimplePool.Preload(DestroyedPrefab, 1); //preloads the destroyed version into the pool
         gm.buildingCount++;
     }
@@ -58,7 +58,7 @@ public class Destroy_Building : MonoBehaviour
         if (!destroyed)
         {
             Debug.Log("Building destruction started");
-            //pm.score += 1; //adds score
+            pm.score += 1; //adds score
             destroyed = true;
             //gm.buildingCount--;
             GameObject temp = SimplePool.Spawn(DestroyedPrefab, transform.position, transform.rotation);
