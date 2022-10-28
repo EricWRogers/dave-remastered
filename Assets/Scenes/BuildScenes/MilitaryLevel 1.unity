@@ -2386,10 +2386,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1128870074528719091, guid: d3b5880106f531a43a41844f458ff310, type: 3}
+      propertyPath: velocityThreshold
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128870075713572244, guid: d3b5880106f531a43a41844f458ff310, type: 3}
+      propertyPath: velocityThreshold
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1128870076006914188, guid: d3b5880106f531a43a41844f458ff310, type: 3}
       propertyPath: DestroyedPrefab
       value: 
       objectReference: {fileID: 5609846385357135496, guid: d9f8ed75140d97e469df3b1dca58f761, type: 3}
+    - target: {fileID: 1128870076006914188, guid: d3b5880106f531a43a41844f458ff310, type: 3}
+      propertyPath: velocityThreshold
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1301551079137608891, guid: d3b5880106f531a43a41844f458ff310, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -9201,6 +9213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NuclearPowerplant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7591875271849476227, guid: 52b2471486a91164687e0470e344af8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52b2471486a91164687e0470e344af8a, type: 3}
 --- !u!1 &1683266262
@@ -10848,6 +10864,10 @@ PrefabInstance:
     - target: {fileID: 7591875271849476227, guid: 52b2471486a91164687e0470e344af8a, type: 3}
       propertyPath: m_Name
       value: NuclearPowerplant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591875271849476227, guid: 52b2471486a91164687e0470e344af8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52b2471486a91164687e0470e344af8a, type: 3}
