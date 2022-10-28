@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
 
     private Transform target;
     private Rigidbody rb;
-    private Explode explodeControl;
+    public Explode explodeControl;
     private Transform child;
     private AudioSource audioSource;
     private GameObject launchFX;

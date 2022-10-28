@@ -1400,7 +1400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294fa1e5e83b9034590e33d36091eca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrinkDelay: 5
+  shrinkDelay: 10
   despawnTime: 10
   shrinkRate: 0.3
   scaleCutOff: 0.05

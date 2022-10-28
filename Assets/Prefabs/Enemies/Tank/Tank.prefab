@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 1947754904}
   - component: {fileID: 1947754903}
   - component: {fileID: 41842905}
+  - component: {fileID: 6006956647432144640}
   m_Layer: 8
   m_Name: Tank Model Master (1)
   m_TagString: Enemy
@@ -168,6 +169,7 @@ MonoBehaviour:
   - {fileID: 1834759541}
   - {fileID: 607095151}
   deathSound: {fileID: 8300000, guid: dfbecfe6de9d1b9449a945764fcf219d, type: 3}
+  despawner: {fileID: 6006956647432144640}
   grabbable: {fileID: 41842905}
   foundPlayer: 0
 --- !u!65 &379912719
@@ -423,6 +425,22 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &6006956647432144640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379912717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fa1e5e83b9034590e33d36091eca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrinkDelay: 10
+  despawnTime: 10
+  shrinkRate: 0.3
+  scaleCutOff: 0.05
 --- !u!1 &482075224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,6 +2549,7 @@ MonoBehaviour:
   deathSmokeTriggerRadius: 1.14
   modelColliders: []
   deathSound: {fileID: 0}
+  despawner: {fileID: 0}
   grabbable: {fileID: 0}
   foundPlayer: 0
 --- !u!65 &1245335194

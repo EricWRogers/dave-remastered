@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damage;
 
-        FindObjectOfType<audioManager>().Play("MonsterPain");
+        //FindObjectOfType<audioManager>().Play("MonsterPain");
 
         healthBar.SetHealth(currentHealth);
     }

@@ -294,6 +294,7 @@ public class GameManager : MonoBehaviour
         if (x == 0)
         {
             dooranim.SetBool("Open", true);
+            startAI = true;
         }
 
         if (x == 1)

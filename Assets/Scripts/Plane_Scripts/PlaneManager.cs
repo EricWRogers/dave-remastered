@@ -26,7 +26,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
     [Tooltip("The radius at which the smoke particles will not be enabled")] public float deathSmokeTriggerRadius;
     public GameObject flash;
     public AudioClip deathSound;
-
+    public DespawnEnemy despawner;
     [HideInInspector] public bool secondTime = false;
     private GameObject player;
     [HideInInspector]
@@ -171,6 +171,7 @@ public class PlaneManager : MonoBehaviour   //general home for all overarching f
                 }
 
                 look.enabled = false;
+                despawner.StartShrink();
                 anim.SetTrigger("Died");
                 rb.useGravity = true;
                 rb.isKinematic = false;

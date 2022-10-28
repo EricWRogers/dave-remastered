@@ -6076,7 +6076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8650424663811897526, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.26
+      value: 4.95
       objectReference: {fileID: 0}
     - target: {fileID: 8650424663811897526, guid: ac4a5f94f4cd63041a41341d2a9e0f45, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6800,7 +6800,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931474889}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -8433,7 +8433,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.19666666
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 6bc3dc04d108fe549b35f57ee92c7e33, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 567ef87e5c596534482ff577e8d84f98, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1502145272
 GameObject:

@@ -24,6 +24,7 @@ public class TankManager : MonoBehaviour
     public float deathSmokeTriggerRadius = 2f;
     public Collider[] modelColliders;
     public AudioClip deathSound;
+    public DespawnEnemy despawner;
 
     private Animator anim;
     private UnityEngine.AI.NavMeshAgent agent;
@@ -100,6 +101,7 @@ public class TankManager : MonoBehaviour
                 gManager.GetComponent<PointManager>().score += points;
                 Destroy(agent);
                 CancelInvoke();
+                despawner.StartShrink();
                 GetComponent<AudioSource>().PlayOneShot(deathSound);
                 transform.parent.GetComponent<AudioSource>().Stop();
 

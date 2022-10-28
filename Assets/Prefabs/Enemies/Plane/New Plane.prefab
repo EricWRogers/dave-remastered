@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 4480456759220095479}
   - component: {fileID: 6889844740182629485}
   - component: {fileID: 8105277298894082557}
+  - component: {fileID: 238462739379129475}
   m_Layer: 0
   m_Name: Plane Model Master
   m_TagString: Untagged
@@ -249,6 +250,7 @@ MonoBehaviour:
   deathSmokeTriggerRadius: 1.67
   flash: {fileID: 3868323896529701364, guid: 18f898a85373c37489734c836f548e1f, type: 3}
   deathSound: {fileID: 8300000, guid: dfbecfe6de9d1b9449a945764fcf219d, type: 3}
+  despawner: {fileID: 238462739379129475}
   secondTime: 0
   rb: {fileID: 0}
   grabbable: {fileID: 8105277298894082557}
@@ -587,6 +589,22 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &238462739379129475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554490105690312907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fa1e5e83b9034590e33d36091eca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrinkDelay: 10
+  despawnTime: 10
+  shrinkRate: 0.3
+  scaleCutOff: 0.05
 --- !u!1 &6554490106994637710
 GameObject:
   m_ObjectHideFlags: 0
